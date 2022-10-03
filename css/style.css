@@ -1,0 +1,341 @@
+* {
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+:root {
+    --primario: #0A3871;
+    --secundario: #E5E5E5;
+    --terciario: #939191;
+    --fondo: #fdf9f9;
+}
+
+body {
+    background-color: var(--fondo);
+    ;
+    width: 98%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn {
+    font-size: 16px;
+    border-radius: 24px;
+    padding: 24px;
+    border: 1px solid;
+    height: 67px;
+    text-decoration: none;
+    text-align: center;
+    width: 31%;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primario);
+    ;
+    color: var(--secundario);
+    ;
+}
+
+.btn-primary:hover {
+    background-color: var(--secundario);
+    ;
+    border: 1px solid var(--primario);
+    ;
+    color: var(--primario);
+    ;
+}
+
+.btn-secondary {
+    background-color: var(--terciario);
+    ;
+    border: 1px solid var(--secundario);
+    ;
+    color: var(--secundario);
+    ;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primario);
+    ;
+    color: var(--terciario);
+    ;
+}
+
+header {
+    height: 50px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.pagina_1 {
+    margin-top: 10%;
+}
+
+.pagina_1 .botones div {
+    margin: 20px;
+}
+
+.pagina_1 .btn {
+    width: 317px;
+}
+
+.pagina_1 .btn-primary {
+    height: 95px;
+}
+
+.pagina_2 {
+    margin: 0 25% 0 25%;
+}
+
+.pagina_2 .btn {
+    width: 49%;
+}
+
+.pagina_2 .input {
+    font-size: 32px;
+    border: none;
+    outline: none;
+    background-color: var(--fondo);
+    ;
+    margin-top: 20px;
+    height: 344px;
+    width: 100%;
+    resize: none;
+}
+
+.pagina_2 .input::placeholder {
+    color: var(--primario);
+    ;
+}
+
+.pagina_2 {
+    text-align: left;
+    font-size: 13px;
+    margin: 0 0 20px 0;
+    color: #D69910;
+}
+
+.pagina_3 canvas {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 4px solid var(--primario);
+    ;
+}
+
+.pagina_3 .displayUser {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.pagina_3 .acertadas {
+    margin: 30px;
+    height: 30px;
+    list-style: none;
+}
+
+.pagina_3 .acertadas li {
+    float: left;
+    width: 80px;
+    height: 60px;
+    font-size: 48px;
+    color: var(--primario);
+    ;
+    margin: 0 30px 0 30px;
+    border-bottom: solid 4px var(--primario);
+    ;
+}
+
+#fallidas {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--primario);
+    ;
+    height: 30px;
+}
+
+.pagina_3 .btn {
+    width: 30%;
+    margin: 10px;
+}
+
+.fondo-mesaje {
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background: rgba(0, 0, 0, 0.9);
+    transition: opacity 500ms;
+    opacity: 1;
+    visibility: visible;
+}
+
+.mesaje {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.mensajaP {
+    text-align: center
+}
+
+#cerrarmesaje {
+    color: var(--fondo);
+    font-weight: bold;
+    transition: all 200ms;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: var(--primario);
+    ;
+    border-radius: 7px;
+}
+
+#cerrarmesaje:hover {
+    color: var(--fondo);
+    background-color: var(--primario);
+}
+
+.keyboard {
+    background: transparent;
+    color: #E5E5E5;
+    outline: none;
+    border: none;
+    display: none;
+}
+
+.btn-keyboard {
+    float: right;
+    border: none;
+    background-color: transparent;
+    color: var(--primario);
+    ;
+    display: none;
+}
+
+.btn-keyboard svg {
+    height: 20px;
+    width: 20px;
+    border: none;
+    outline: none;
+}
+
+.btn-keyboard:hover {
+    color: var(--secundario);
+    ;
+}
+
+
+/*MEDIAS*/
+
+@media(max-width:900px) {
+    .mesaje {
+        width: 70%;
+        font-size: 20px;
+    }
+    .pagina_1 {
+        margin-top: 30%;
+    }
+    .pagina_1 .btn-primary {
+        height: 100px;
+    }
+    .pagina_2 {
+        margin: 0% 3% 0% 3%;
+    }
+    header {
+        margin-top: 8%;
+    }
+    .pagina_2 .input {
+        margin-top: 10%;
+        height: 234px;
+    }
+    .pagina_2 .botones {
+        margin-top: 60%;
+    }
+    .pagina_3 {
+        margin-top: 50px;
+    }
+    .pagina_3 .displayUser {
+        margin-top: 10%;
+        margin-bottom: 20%;
+    }
+    #cerrarmesaje {
+        font-size: calc(1rem - 1vw);
+    }
+    .keyboard {
+        display: block;
+    }
+    .btn-keyboard {
+        display: block;
+    }
+}
+
+@media(max-width:500px) {
+    .mesaje {
+        width: 90%;
+        padding: 7px;
+    }
+    .pagina_1 {
+        margin-top: 30%;
+    }
+    .pagina_1 .btn {
+        width: 95%;
+    }
+    header {
+        margin-top: 10%;
+    }
+    .pagina_2 {
+        width: 90%;
+        margin: 0 7% 0 7%;
+    }
+    .pagina_2 .input {
+        margin-top: 10%;
+        height: 244px;
+    }
+    .pagina_2 .botones {
+        margin-top: 10%;
+    }
+    .pagina_2 .btn {
+        width: 90%;
+        margin-top: 5px;
+    }
+    .pagina_3 {
+        margin-top: 0%;
+    }
+    .pagina_3 .displayUser {
+        margin-top: 7%;
+        margin-bottom: 10%;
+    }
+    .pagina_3 .acertadas {
+        display: flex;
+        justify-content: center;
+    }
+    .pagina_3 .acertadas li {
+        width: 50vw;
+        margin-inline-start: auto;
+        font-size: 45px;
+    }
+    .pagina_3 .fallidas {
+        margin: 7% 0 0 0;
+    }
+    .pagina_3 .btn {
+        width: 90%;
+    }
+    .pagina_3 .botones {
+        display: block !important;
+    }
+}
